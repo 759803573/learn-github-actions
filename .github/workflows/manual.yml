@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: echo config
-      run: "echo \"Datasets location: ${{ github.event.inputs.dataset_location }}"
+      run: "echo \"Datasets location: ${{ github.event.inputs.dataset_location }}\""
   build:
     runs-on: ubuntu-latest
     steps:
