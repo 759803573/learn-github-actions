@@ -14,11 +14,13 @@ jobs:
       run: "echo \"Datasets location: ${{ github.event.inputs.dataset_location }}\""
   build:
     runs-on: ubuntu-latest
+    needs: echo_config
     steps:
     - name: create artifact
       run: echo "create artifact"
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     steps:
     - name: Checkout Repository
       uses: actions/checkout@main
